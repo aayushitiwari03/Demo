@@ -93,10 +93,10 @@ fun AddItem(
     val selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true
 
     val background =
-        if (selected) green.copy(alpha = 0.6f) else Color.Transparent
+        if (selected) green else Color.Transparent
 
     val contentColor =
-        if (selected) Color.White else Color.Black
+        if (selected) Color.White else green
 
     Box(
         modifier = Modifier
