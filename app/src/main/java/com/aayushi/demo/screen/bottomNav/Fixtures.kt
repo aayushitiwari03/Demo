@@ -8,12 +8,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ReportScreen() {
-
+fun Fixtures() {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        Text(text = "Report Screen", fontSize = 20.sp)
+        Text(text = " Fixtures Screen", fontSize = 20.sp)
     }
-
 }

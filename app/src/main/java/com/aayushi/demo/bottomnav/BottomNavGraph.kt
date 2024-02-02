@@ -4,9 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.aayushi.demo.screen.bottomNav.HomeScreen
-import com.aayushi.demo.screen.bottomNav.ProfileScreen
-import com.aayushi.demo.screen.bottomNav.ReportScreen
+import com.aayushi.demo.screen.bottomNav.*
 
 
 @Composable
@@ -21,10 +19,22 @@ fun BottomNavGraph(
         {
             HomeScreen()
         }
-        composable(route = BottomBarScreen.Report.route)
+
+        composable(route = BottomBarScreen.ENGvsIND.route)
         {
-            ReportScreen()
+            ENGvsIND()
         }
+
+        composable(route = BottomBarScreen.Matches.route)
+        {
+            Matches()
+        }
+
+        composable(route = BottomBarScreen.Fixtures.route)
+        {
+            Fixtures()
+        }
+
         composable(route = BottomBarScreen.Profile.route)
         {
             ProfileScreen()

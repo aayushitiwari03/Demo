@@ -33,7 +33,7 @@ import androidx.navigation.compose.rememberNavController
 import com.aayushi.demo.bottomnav.BottomBarScreen
 import com.aayushi.demo.bottomnav.BottomNavGraph
 import com.aayushi.demo.ui.theme.Purple700
-
+import com.aayushi.demo.ui.theme.green
 
 
 @Composable
@@ -56,7 +56,9 @@ fun MainScreen() {
 fun BottomBar(navController: NavHostController) {
     val screens = listOf(
         BottomBarScreen.Home,
-        BottomBarScreen.Report,
+        BottomBarScreen.ENGvsIND,
+        BottomBarScreen.Matches,
+        BottomBarScreen.Fixtures,
         BottomBarScreen.Profile
     )
 
@@ -91,7 +93,7 @@ fun AddItem(
     val selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true
 
     val background =
-        if (selected) Purple700.copy(alpha = 0.6f) else Color.Transparent
+        if (selected) green.copy(alpha = 0.6f) else Color.Transparent
 
     val contentColor =
         if (selected) Color.White else Color.Black
