@@ -7,10 +7,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.aayushi.demo.R
+import com.aayushi.demo.screen.tab.DaysScreen
 import com.aayushi.demo.ui.theme.green
 
 @Composable
@@ -48,10 +46,7 @@ fun Fixtures() {
     }
 }
 
-@Composable
-fun DaysScreen() {
-    Text(text = "Days Screen Content", fontSize = 20.sp)
-}
+
 
 @Composable
 fun SeriesScreen() {
