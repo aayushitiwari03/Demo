@@ -23,7 +23,7 @@ import com.aayushi.demo.ui.theme.green
 
 @Composable
 fun ENGvsIND() {
-    var selectedTabIndex by remember { mutableStateOf(0) }
+
 
     Column(
     ) {
@@ -31,83 +31,22 @@ fun ENGvsIND() {
             modifier = Modifier
                 .weight(1f)
         ) {
-//            LazyRow(
-//                modifier = Modifier
-//                    .padding(8.dp)
-//                    .align(Alignment.TopCenter)
-//            ) {
-//                items(10) {
-//                    Image(
-//                        painter = painterResource(id = R.drawable.img),
-//                        contentDescription = null,
-//                        modifier = Modifier.size(100.dp)
-//                    )
-//                }
-//            }
-
-            TabRow(
-                selectedTabIndex = selectedTabIndex,
-                backgroundColor = green,
-                contentColor = Color.White,
+            LazyRow(
                 modifier = Modifier
-                    .align(Alignment.TopStart)
-                    .height(50.dp)
-                    .fillMaxWidth()
-                    //.horizontalScroll(rememberLazyListState()) // Use rememberLazyListState() for horizontal scroll
+                    .padding(8.dp)
+                    .align(Alignment.TopCenter)
             ) {
-                Tab(
-                    selected = selectedTabIndex == 0,
-                    onClick = {
-                        selectedTabIndex = 0
-                    },
-                    text = { Text("OverView") }
-                )
-                Tab(
-                    selected = selectedTabIndex == 1,
-                    onClick = {
-                        selectedTabIndex = 1
-                    },
-                    text = { Text("Matches") }
-                )
-                Tab(
-                    selected = selectedTabIndex == 2,
-                    onClick = {
-                        selectedTabIndex = 2
-                    },
-                    text = { Text("Teams") }
-                )
-                Tab(
-                    selected = selectedTabIndex == 3,
-                    onClick = {
-                        selectedTabIndex = 3
-                    },
-                    text = { Text("Series State") }
-                )
-                Tab(
-                    selected = selectedTabIndex == 4,
-                    onClick = {
-                        selectedTabIndex = 4
-                    },
-                    text = { Text("News") }
-                )
-                Tab(
-                    selected = selectedTabIndex == 5,
-                    onClick = {
-                        selectedTabIndex = 5
-                    },
-                    text = { Text("Info") }
-                )
+                items(10) {
+                    Image(
+                        painter = painterResource(id = R.drawable.img),
+                        contentDescription = null,
+                        modifier = Modifier.size(100.dp)
+                    )
+                }
             }
+
         }
 
-        when (selectedTabIndex) {
-            0 -> OverView()
-            1 -> Matche()
-            2 -> Teams()
-            3 -> SeriesStateScreen()
-            4 -> NewsScreen()
-            5 -> InfoScreen()
-        }
     }
 }
 
