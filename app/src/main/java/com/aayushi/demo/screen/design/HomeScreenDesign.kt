@@ -3,14 +3,13 @@ package com.aayushi.demo.screen.design
 
 import android.graphics.drawable.PaintDrawable
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -75,13 +74,30 @@ fun HomeLazyRowItemDesign(list: HomeLazyRowItem) {
             .padding(8.dp)
             .width(360.dp)
     ) {
-        Column {
-            Text(text = list.matchInfo, fontSize = 15.sp, modifier = Modifier.padding(8.dp), color = Color.White)
-            Text(text = list.team1, fontSize = 15.sp, modifier = Modifier.padding(8.dp), color = Color.White)
-            Text(text = list.team2, fontSize = 15.sp, modifier = Modifier.padding(8.dp), color = Color.White)
-            Text(text = list.stream, fontSize = 15.sp, modifier = Modifier.padding(8.dp), color = Color.White)
-            Text(text = list.matchDay, fontSize = 15.sp, modifier = Modifier.padding(8.dp), color = Color.White)
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp)
+        ) {
+            Column(
+                modifier = Modifier.weight(1f) // This makes the first Column take up the available space
+            ) {
+                Text(text = list.matchInfo, fontSize = 10.sp, modifier = Modifier.padding(4.dp), color = Color.LightGray)
+                Text(text = list.team1, fontSize = 15.sp, modifier = Modifier.padding(8.dp), color = Color.White)
+                Text(text = list.team2, fontSize = 15.sp, modifier = Modifier.padding(8.dp), color = Color.White)
+                Text(text = list.matchDay, fontSize = 12.sp, modifier = Modifier.padding(8.dp), color = Color.Yellow)
+            }
+            Text(
+                text = list.stream,
+                fontSize = 13.sp,
+                modifier = Modifier
+                    .padding(4.dp)
+                    .align(Alignment.CenterVertically), // Align the Text to the center vertically
+                color = Color.Red
+            )
         }
+
+
     }
 }
 
