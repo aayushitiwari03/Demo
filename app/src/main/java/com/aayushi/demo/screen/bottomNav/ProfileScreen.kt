@@ -162,6 +162,17 @@ fun ProfileScreen() {
                             .padding(end = 16.dp)
                     )
                 }
+                Box(
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Spacer(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(1.dp)
+                            .background(Color.LightGray)
+                            .padding(start = 16.dp, end = 16.dp)
+                    )
+                }
 
 
                 Spacer(modifier = Modifier.height(8.dp))
