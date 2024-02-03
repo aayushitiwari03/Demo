@@ -21,7 +21,7 @@ import com.aayushi.demo.ui.theme.green
 fun Matches() {
     var selectedTabIndex by remember { mutableStateOf(0) }
 
-    val tabs = listOf("Live Screen", "For You", "Upcoming", "Finished")
+    val tabs = listOf("Live", "For You", "Upcoming", "Finished")
 
     Column(
         modifier = Modifier.fillMaxSize()
